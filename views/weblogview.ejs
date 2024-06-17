@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= "Weblog Data" %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+<style>
+    table.table.table-striped.table-bordered {
+      color: white;
+     
+    }
+    
+    table.table-striped.table-bordered thead {
+      background-color: #343a40; 
+    }
+  
+    table.table-striped.table-bordered tbody{
+      color:rgb(253, 253, 253);
+      background-color: grey;
+    }
+</style>
+</head>
+
+<body>
+    <%- include("menu") %>
+    <main class="container mt-4">
+    <h1 class="mb-4 text-center text-white">Weblog Users</h1>
+    <div class="table-responsive"> 
+      <table class="table table-striped table-bordered"> 
+        <thead> 
+                <tr>
+                    <th scope="col">IP_Address</th>
+                    <th scope="col">User_Name</th>
+                    <th scope="col">TimeStamp</th>
+                    <th scope="col">HTTP_Method</th>
+                    <th scope="col">From_Page</th>
+                    <th scope="col">To_Page</th>
+                    <th scope="col">Http_Version</th>
+                    <th scope="col">Response_Code</th>
+                    <th scope="col">Response_Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% webdata.forEach((web) => { %> 
+                    <tr>
+                        <td><%= web.ip_address %></td>
+                        <td><%= web.user_name %></td>
+                        <td><%= web.timestamp %></td>
+                        <td><%= web.http_method %></td>
+                        <td><%= web.from_page %></td>
+                        <td><%= web.to_page %></td>
+                        <td><%= web.http_version %></td>
+                        <td><%= web.response_code %></td>
+                        <td><%= web.response_size %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+   </body>
+</html>

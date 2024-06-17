@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>WebLogData</title>
+</head>
+<body>
+<style>
+   body {
+            background-image: url('../assets/img.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding-top: 20px;
+        }
+  nav{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:10px 90px;
+    box-sizing:border-box;
+    background-color: rgba(0,0,0,0.6);
+    border-bottom:1px solid #fff;
+  }
+  nav .logo{
+    padding:22px 20px;
+    height:80px;
+    float:left;
+    font-size:24px;
+    font-weight:bold;
+    text-transform: uppercase;
+    color:#fff;
+    margin-right: 20px; /* Adjust margin to add space */
+  }
+  nav ul{
+    list-style:none;
+    float:right;
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  nav ul li a{
+    line-height: 80px;
+    color:#fff;
+    padding:12px 30px;
+    text-decoration: none;
+    font-size:14px;
+    font-weight:bold;
+    text-transform: uppercase;
+    }
+    nav ul li a:hover{
+        background: rgba(0,0,0,0.7);
+        border-radius: 6px;
+    }
+    section{
+        width: 100%;
+        height:100vh;
+         background:url('https://images.unsplash.com/photo-1639815188508-13f7370f664a?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat;
+        background-size: cover;
+    }
+</style>
+<nav>
+    <div class="logo">Weblog Data</div>
+    <ul>
+      <li><a href="/login/admin">Admin</a></li>
+    </ul>
+</nav>
+<section></section>
+</body>
+</html>

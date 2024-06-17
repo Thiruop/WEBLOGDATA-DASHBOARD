@@ -1,0 +1,30 @@
+db.users.insertMany([{
+
+        username: "deepak",
+        password: "deepak123",
+        usertype: "admin"
+    },
+    {
+
+        username: "kowsalya",
+        password: "kowsalya123",
+        usertype: "user"
+    },
+    {
+
+        username: "tamilmani",
+        password: "tamilmani123",
+        usertype: "user"
+    },
+    {
+
+        username: "shyamvikaas",
+        password: "shyamvikaas123",
+        usertype: "user"
+    },
+    {
+
+        username: "thiru",
+        password: "thiru123",
+        usertype: "admin"
+    }])

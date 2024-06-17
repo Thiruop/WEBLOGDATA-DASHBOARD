@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebLogData Admin Panel</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+        width: 100%;
+        background: url("./assets/img.avif")
+          no-repeat;
+        background-size: cover;
+      }
+
+      nav {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        background-color: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+      }
+
+      nav .logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 5px;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; 
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      nav ul li a:hover {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 6px;
+      }
+      .card-table {
+        margin: 50px 50px;
+        background-color: rgb(15 14 14 / 40%);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        backdrop-filter: blur(4px);
+      }
+      .card-header {
+        color: #fff;
+        border-radius: 10px 10px 0 0;
+        padding: 10px;
+        text-align: center;
+        backdrop-filter: blur(0px);
+        font-size: 22px;
+      }
+      a {
+        color: #fff;
+        font-size: 22px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo">Welcome Back!</h1>
+      <ul>
+        <li>
+          <a href="/admin">Admin View</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="card card-table">
+      <h1 class="card-header">User Details</h1>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered text-white">
+            <thead>
+              <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">Password</th>
+                <th scope="col">User Type</th>
+                <th scope="col">Option</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% details.forEach((detail) => { %>
+              <tr>
+                <td><%= detail.username %></td>
+                <td><%= detail.password %></td>
+                <td><%= detail.usertype %></td>
+                <td>
+                  <a href="/admin/edit/<%= detail._id %>"
+                    ><i class="fas fa-edit"></i
+                  ></a>
+                  <a href="/admin/delete/<%= detail._id %>"
+                    ><i class="fas fa-trash-alt"></i
+                  ></a>
+                </td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

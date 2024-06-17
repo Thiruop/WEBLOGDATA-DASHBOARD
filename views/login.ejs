@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <style>
+    body {
+        background-image: url('https://images.pexels.com/photos/10679528/pexels-photo-10679528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    </style>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="pb-4 ">Welcome Buddy.! </h1>
+                <form action="/userverfication" method="get">
+                    <h2 class="mb-4">Sign In</h2>
+                    <div class="form-group">
+                        <label for="username" class="font-weight-bold">Username:</label>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="font-weight-bold">Password:</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_type" class="font-weight-bold">User Type:</label>
+                        <select id="user_type" name="user_type" class="form-control" required>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="/registration" method="get" class="pt-4 ">
+                <button type="submit" class="btn btn-success btn-block ">Sign Up</button>
+            </form>
+        
+        </div>
+      </div>
+    </div>
+    
+    </body>
+    </html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<style>
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+        width: 100%;
+        background: url("https://images.unsplash.com/photo-1639815188508-13f7370f664a?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+          no-repeat;
+        background-size: cover;
+        background-color: transparent;
+      }
+      .card-header {
+            color:black;
+            border-radius: 10px 10px 0 0;
+            padding: 10px;
+            text-align: center;
+            backdrop-filter: blur(0px);
+            font-size: 22px;
+        }
+    nav {
+        position: top;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid #fff;
+        height: auto;
+      }
+      nav .logo {
+        padding: 12px 20px;
+
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      nav .logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      nav ul li a:hover {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 6px;
+      }
+  .card{
+backdrop-filter: blur(5px);
+background-color: transparent;
+    }
+   label{
+color: white;
+    }
+</style>
+<body>
+    <nav>
+        <h1 class="logo">Web Log DataMining</h1>
+        <ul>
+          <li><a href="/admin">Admin</a></li>
+        </ul>
+      </nav>
+   <div class="edit-img">
+    <div class="container mt-4  ">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Edit User Details
+                    </div>
+                    <div class="card-body">
+                        <form action="/admin/edit/<%= detail._id %>" method="post">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" value="<%= detail.username %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="text" class="form-control" id="password" name="password" value="<%= detail.password %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="usertype">User Type</label>
+                                <input type="text" class="form-control" id="usertype" name="usertype" value="<%= detail.usertype %>">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
